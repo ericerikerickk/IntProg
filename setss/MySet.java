@@ -28,8 +28,8 @@ public class MySet implements Set{
    for(int i = 0; i < count; i++)
     union.add(items[i]);
    for(int i = 0; i < argSet.count; i++)
-    if(!isFound(argSet.items[i]))
-     union.add(items[i]);
+    if(!union.isFound(argSet.items[i]))
+     union.add(argSet.items[i]);
    return union;
   }
   public Set intersection(Set set)
@@ -81,6 +81,7 @@ public class MySet implements Set{
   public static void main(String [] args){
    MySet setA = new MySet();
    MySet setB = new MySet();
+   
    setA.add(5);
    setA.add(2);
    setA.add(1);
@@ -91,6 +92,7 @@ public class MySet implements Set{
    setB.add(6);
    setB.add(1);
    setB.add(4);
+   
    System.out.println("setA contains:" + setA);
    System.out.println("setA contains:" + setB);
    System.out.println("setA.union(setB):" + setA.union(setB));
