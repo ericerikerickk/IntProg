@@ -60,17 +60,17 @@ public class MySet extends JFrame implements Set{
      newSet.add(argSet.items[i]);
   return newSet;
   }
-  public boolean isSubset(Set set)
+  public String isSubset(Set set)
   {
    MySet argSet = (MySet) set;
 	   for (int i = 0; i < count; i++) 
 	   {
 	      if (!argSet.isFound(items[i])) 
 	      {
-	         return false;
+	         return "false";
 	      }
 	   }
-	   return true;
+	   return "true";
   }
   public int cardinality()
   {
